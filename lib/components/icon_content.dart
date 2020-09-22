@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:BMI_calculator/constants.dart';
 
 class IconContent extends StatelessWidget {
+  IconContent({this.icon, this.label});
 
-  const IconContent({@required this.icon, @required this.label});
   final IconData icon;
   final String label;
 
@@ -12,7 +11,7 @@ class IconContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: <Widget>[
         Icon(
           icon,
           size: 80.0,
@@ -20,11 +19,10 @@ class IconContent extends StatelessWidget {
         SizedBox(
           height: 15.0,
         ),
-        Text(label,
-          style: GoogleFonts.montserrat(
-            textStyle: kLabelTextStyle,
-          ),
-        ),
+        Text(
+          label,
+          style: kLabelTextStyle,
+        )
       ],
     );
   }
